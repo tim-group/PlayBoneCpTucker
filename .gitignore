@@ -11,3 +11,4 @@ logs/
 sample/logs/
 *.iml
 *~
+*.sublime-workspace
