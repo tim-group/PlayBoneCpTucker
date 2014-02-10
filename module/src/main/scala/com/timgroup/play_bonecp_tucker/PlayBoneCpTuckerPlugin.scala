@@ -6,10 +6,18 @@ import com.timgroup.tucker.info.component.DatabaseConnectionComponent.Connection
 import java.sql.Connection
 import javax.sql.DataSource
 import play.api.{Logger, Application, Plugin}
+import com.timgroup.play_tucker.PlayTuckerPlugin
 
 class PlayBoneCpTuckerPlugin(application: Application) extends Plugin {
 
   override def onStart() {
+    import play.api.Play.current
+    import com.typesafe.plugin.use
+
+    val tucker = use[PlayTuckerPlugin]
+
+    components.foreach(tucker.addComponent)
+
     Logger.info("PlayBoneCpTuckerPlugin started")
   }
 
