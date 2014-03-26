@@ -3,6 +3,9 @@ Play BoneCP Tucker
 
 Status page components for BoneCP DataSources in Play Applications
 
+-- For Play 2.2.x use the play22x branch
+
+
 Installation
 ------------
 
